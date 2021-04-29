@@ -15,13 +15,48 @@ class Timer extends Component {
         m: Math.floor((t % 3600) / 60) ,
         s: t % 60
      })
+    
+     console.log('time convert',this.state.s)
+     
+ }
+ StartTime = ()=>{
+     if(this.state.interval){
+         return
+     }
+   const inter= setInterval(
+        () => {
+           this.setState({
+               s: this.state.s + 1
+           }) 
+        },  1000
+    )
+    this.setState({
+        interval:inter
+    })
  }
  EvenTime=(e)=>{
     this.setState({ time: e.target.value }
     )
-console.log("time is",this.state.time);
+}
+RessetTime=()=>{
+    
+    this.setState({
+        h:0,
+        m:0,
+        s:0
+    })
+}
+PauseTime =()=> {
+    if(!this.state.interval) {
+        return
+    }
+    clearInterval(this.state.interval)
+    this.setState({
+        interval: undefined
+    })
 }
  render() {
+    console.log("time is",this.state.t);
   return(
    <Container>
        <h1 className="mt-5 timer">Timer </h1>
@@ -37,10 +72,19 @@ console.log("time is",this.state.time);
          </div>
      </div>
        <div className="time">
-       <h1>{this.state.h}:</h1>
-       <h1>{this.state.m}:</h1>
-       <h1>{this.state.s}</h1>
+       <h1 className="mr-4">{String(this.state.h).padStart(2,'0')}:</h1>
+       <h1 className="mr-4">{String(this.state.m).padStart(2,'0')}:</h1>
+       <h1 className="mr-4">{String(this.state.s).padStart(2,'0')}</h1>
+       
        </div>
+       <div className="box-item">
+        <span className="mr-4">Heures</span>
+       <span className="mr-4">Minutes</span>
+       <span className="mr-4">Secondes</span>
+       </div>
+  <input onClick={this.RessetTime} type="button" value="Reset"/>
+  <input onClick={this.StartTime} type="button" value="Start"/>
+  <input onClick={this.PauseTime} type="button" value="Pause"/>
    </Container>
     )
    }

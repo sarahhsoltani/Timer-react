@@ -6,8 +6,9 @@ img{
 }
 .time{
     display: flex;
+    justify-content: space-around;
     background: rgb(168 177 234);
-    width: 183px;
+    width: 236px;
     padding: 8px 9px 7px 41px;
 }
 .btn-small{
@@ -19,4 +20,8 @@ img{
     font-weight: 500;
     text-shadow: 4px 7px 11px rgb(0 0 0 / 60%);
     letter-spacing: 18px;
+}
+.box-item{
+    display: flex;
+   color: gray;
 }
