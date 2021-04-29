@@ -1,0 +1,22 @@
+img{
+    width: 33%;
+    vertical-align: middle;
+    border-style: none;
+    height: 100%;
+}
+.time{
+    display: flex;
+    background: rgb(168 177 234);
+    width: 183px;
+    padding: 8px 9px 7px 41px;
+}
+.btn-small{
+    border: none;
+    letter-spacing: 2px;
+    color: rgb(89 108 232);;
+}
+.timer{
+    font-weight: 500;
+    text-shadow: 4px 7px 11px rgb(0 0 0 / 60%);
+    letter-spacing: 18px;
+}
