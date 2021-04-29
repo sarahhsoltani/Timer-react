@@ -4,24 +4,56 @@ img{
     border-style: none;
     height: 100%;
 }
+.timee{
+    background-image: url("../components/image/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .time{
     display: flex;
     justify-content: space-around;
-    background: rgb(168 177 234);
+    background: rgba(255, 255, 255, 0.2);
     width: 236px;
+    color: white;
+    margin-top: 28px;
+    margin-left: 343px;
     padding: 8px 9px 7px 41px;
 }
 .btn-small{
-    border: none;
+  
     letter-spacing: 2px;
-    color: rgb(89 108 232);;
+    color: white;
+    font-weight: 700;
+    background-color: transparent;
+}
+.spann{
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    background: transparent !important;
+    color: #fff !important;
 }
 .timer{
-    font-weight: 500;
-    text-shadow: 4px 7px 11px rgb(0 0 0 / 60%);
-    letter-spacing: 18px;
+    font-weight: 800;
+    color: white;
+    font-size: 57px;
+    letter-spacing: 1px;
 }
 .box-item{
     display: flex;
    color: gray;
+   margin-left: 343px;
+}
+.event{
+    background: #ffbd39;
+    border: 1px solid #ffbd39 !important;
+    color: #000000 !important;
+    padding: 6px 32px 6px 40px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+.events{
+    margin-right: 110px;
+}
+.input-time{
+    margin-left: 227px !important;
 }
